@@ -1,39 +1,34 @@
 import { Page } from "@playwright/test";
 import { ProductLocators } from "../components/productlocators.ui";
-
 export class ProductMethods
 {
    readonly productlocators: ProductLocators;
-   
 
-   constructor(page:Page)
-   {
+   constructor(page:Page){
     this.productlocators = new ProductLocators(page);
    }
 
-   async clickOnPinkColour()
-   {
+   async clickOnPinkColour(){
     await this.productlocators.selectTvPinkColour.click();
    }
-   async clickOnSpeakerColour()
-   {
+
+   async clickOnSpeakerColour(){
     await this.productlocators.selectSpeakerColour.click();
    }
-   async clickOnTvSize()
-   {
+
+   async clickOnTvSize(){
     await this.productlocators.sizeOfTv.click();
    }
-   async clickOnDialogButton()
-   {
+
+   async clickOnDialogButton(){
    await this.productlocators.dialogClose.click();
    }
-   async clickOnChoosePlanButton()
-   {
+
+   async clickOnChoosePlanButton(){
     await this.productlocators.choosePlan.click();
    }
-   async clickOnContinueButton()
-   {
+   
+   async clickOnContinueButton(){
     await this.productlocators.continueButton.click();
    }
-   
 }

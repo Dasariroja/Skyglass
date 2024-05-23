@@ -1,8 +1,5 @@
 import { Locator, Page } from "@playwright/test";
-
-export class CookiesLoctors
-{
-
+export class CookiesLoctors {
     static readonly FRAME_COOKIES_LOCATOR = 'iframe[title="SP Consent Message"]';
     static readonly COOKIES = 'button:has-text("Accept all")';
 
@@ -13,5 +10,4 @@ export class CookiesLoctors
         const frameCookiesLocator = page.frameLocator(CookiesLoctors.FRAME_COOKIES_LOCATOR);
         this.cookies = frameCookiesLocator.getByLabel('Accept all');
     }
-
 }
